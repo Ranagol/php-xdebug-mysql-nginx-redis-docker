@@ -1,6 +1,19 @@
 .docker/dbdata
 /.env
 .idea
+/node_modules
+/public/storage
+/vendor
+.env
+.env.example
+.env.testing
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+composer.lock
+composer.phar
+npm-debug.log
+yarn-error.log
 
 Docker container for PHP apps with PHP, Xdebug, Mysql, Nginx and Redis
 
