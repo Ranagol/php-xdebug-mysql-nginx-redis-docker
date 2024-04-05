@@ -2,15 +2,15 @@
 
 
 
-"illuminate/database": "^8.51",
-blade
-xdebug
+
+
 logging
 login/logout
 phpmyadmin
 create one mvc
-make a Laravel like dir structure
-add console package
+blade
+xdebug
+add console package + add command for triggering migrations
 add one exception
 seeding and faking
 add testing too
