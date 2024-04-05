@@ -1,12 +1,18 @@
 # My comments
-"vlucas/phpdotenv": "^5.3",
-"illuminate/database": "^8.51",
+
+
 "guzzlehttp/guzzle": "^7.0"
+"illuminate/database": "^8.51",
 blade
 xdebug
 logging
 login/logout
 phpmyadmin
+create one mvc
+make a Laravel like dir structure
+add console package
+add one exception
+
 
 
 

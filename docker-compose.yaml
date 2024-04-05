@@ -14,11 +14,11 @@ services:
     restart: unless-stopped
     entrypoint: dockerize -template ./.docker/app/.env:.env -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
     environment:
-      - _DB_HOST=db
-      - _DB_DATABASE=appdb
-      - _DB_USERNAME=root
-      - _DB_PASSWORD=root
-      - _REDIS_HOST=redis
+      - _DB_HOST=${DB_HOST}
+      - _DB_DATABASE=${DB_DATABASE}
+      - _DB_USERNAME=${DB_USERNAME}
+      - _DB_PASSWORD=${DB_PASSWORD}
+      - _REDIS_HOST=${REDIS_HOST}
       - PHP_IDE_CONFIG=serverName=XdebugServer
     volumes:
       - .:/var/www
@@ -52,9 +52,9 @@ services:
     volumes:
       - ./.docker/dbdata:/var/lib/mysql
     environment:
-      - MYSQL_DATABASE=appdb
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_ROOT_USER=root
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_USER=${DB_USERNAME}
     networks:
       - app-network
 
