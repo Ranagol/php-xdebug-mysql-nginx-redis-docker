@@ -3,6 +3,12 @@
 // AUTOLOAD****************************************************
 require __DIR__ . '/vendor/autoload.php';
 
+// DOTENV****************************************************
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+// Use the $_ENV global variable to access things from .env file
+echo $_ENV['DB_CONNECTION'];
+
 
 
 // DEBUGBAR****************************************************
