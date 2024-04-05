@@ -1,5 +1,6 @@
 {
     "require": {
-        "maximebf/debugbar": "^1.22"
+        "maximebf/debugbar": "^1.22",
+        "bramus/router": "~1.6"
     }
 }
