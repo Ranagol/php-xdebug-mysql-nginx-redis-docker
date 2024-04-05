@@ -28,7 +28,7 @@ $client = new Client([
 ]);
 
 $response = $client->request('GET');
-var_dump(json_decode($response->getBody(), true));
+// var_dump(json_decode($response->getBody(), true));
 
 
 
@@ -50,6 +50,47 @@ $router->get('/', function () {
 
 // Run it!
 $router->run();
+
+// ELOQUENT****************************************************
+
+use Illuminate\Database\Capsule\Manager as Capsule;
+
+$capsule = new Capsule;
+
+$capsule->addConnection([
+    'driver'    => $_ENV['DB_CONNECTION'],
+    'host'      => $_ENV['DB_HOST'],
+    'database'  => $_ENV['DB_DATABASE'],
+    'username'  => $_ENV['DB_USERNAME'],
+    'password'  => $_ENV['DB_PASSWORD'],
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+]);
+
+// Set the event dispatcher used by Eloquent models... (optional)
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
+$capsule->setEventDispatcher(new Dispatcher(new Container));
+
+// Make this Capsule instance available globally via static methods... (optional)
+$capsule->setAsGlobal();
+
+// Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
+$capsule->bootEloquent();
+
+// Capsule::schema()->create('users', function ($table) {
+//     $table->increments('id');
+//     $table->string('email')->unique();
+//     $table->timestamps();
+// });
+
+class User extends Illuminate\Database\Eloquent\Model {}
+
+$users = User::all()->toArray();
+
+// var_dump($users);
+
 
 ?>
 

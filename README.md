@@ -1,7 +1,7 @@
 # My comments
 
 
-"guzzlehttp/guzzle": "^7.0"
+
 "illuminate/database": "^8.51",
 blade
 xdebug
@@ -12,6 +12,8 @@ create one mvc
 make a Laravel like dir structure
 add console package
 add one exception
+seeding and faking
+add testing too
 
 
 
