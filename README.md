@@ -1,8 +1,20 @@
-<h2 align="center">
-  PHP Apps Containers
-</h2>
-<br>  
-This repo contains a basic docker container for PHP apps.
+# My comments
+"vlucas/phpdotenv": "^5.3",
+"illuminate/database": "^8.51",
+"bramus/router": "~1.5",
+"guzzlehttp/guzzle": "^7.0"
+
+blade
+routes
+dotenv
+xdebug
+logging
+login/logout
+eloquent
+phpmyadmin
+
+
+
 
 ## 🚀 Tecnologies
 
