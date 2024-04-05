@@ -18,6 +18,19 @@ $debugbarRenderer = $debugbar->getJavascriptRenderer();
 
 $debugbar["messages"]->addMessage("hello world!");
 
+// GUZZLE****************************************************
+
+use GuzzleHttp\Client;
+
+$client = new Client([
+    'base_uri' => 'https://api.chucknorris.io/jokes/random',
+    'timeout'  => 2.0,
+]);
+
+$response = $client->request('GET');
+var_dump(json_decode($response->getBody(), true));
+
+
 
 
 // ROUTER****************************************************
