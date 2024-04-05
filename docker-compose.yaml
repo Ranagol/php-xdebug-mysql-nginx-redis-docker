@@ -48,7 +48,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "33006:3306"
+      - "3306:3306"
     volumes:
       - ./.docker/dbdata:/var/lib/mysql
     environment:
@@ -57,6 +57,23 @@ services:
       - MYSQL_ROOT_USER=${DB_USERNAME}
     networks:
       - app-network
+
+  phpmyadmin2:
+    image: phpmyadmin
+    container_name: phpmyadmin2
+    networks:
+        - app-network
+    ports:
+        - 3000:80
+    environment:
+        - PMA_HOST=${DB_HOST}
+        - PMA_PORT=${DB_PORT}
+        - PMA_USER=${DB_USERNAME}
+        - PMA_PASSWORD=${DB_PASSWORD}
+        - PMA_ARBITRARY=1
+    depends_on:
+        - db
+
 
   redis:
     image: redis:latest

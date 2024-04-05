@@ -4,11 +4,9 @@
 
 
 
-logging
-login/logout
+
 phpmyadmin
-create one mvc
-blade
+create one mvc + blade??? or twig????
 xdebug
 add console package + add command for triggering migrations
 add one exception
