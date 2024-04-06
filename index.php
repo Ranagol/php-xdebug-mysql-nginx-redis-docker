@@ -107,6 +107,13 @@ $users = User::all()->toArray();
 // var_dump($users);
 
 
+// TWIG****************************************************
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/resources/views');
+$twig = new \Twig\Environment($loader);
+
+echo $twig->render('hello.twig', ['name' => 'John Doe']);
+
+
 ?>
 
 
