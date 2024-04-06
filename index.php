@@ -107,7 +107,43 @@ $users = User::all()->toArray();
 // var_dump($users);
 
 
+// USING BLADES****************************************************
+use Illuminate\View\Compilers\BladeCompiler;
+use Illuminate\Filesystem\Filesystem;
+
+// Set up Blade
+$cachePath = __DIR__ . '/resources/views/cache'; // Adjust this to your cache directory
+$templatePath = __DIR__ . '/resources/views/templates'; // Adjust this to your template directory
+$compiledPath = __DIR__ . '/resources/views/compiled'; // Adjust this to your compiled templates directory
+
+$bladeCompiler = new BladeCompiler(new Filesystem, $cachePath);
+
+// Compile Blade templates
+$bladeCompiler->compile($templatePath, $compiledPath);
+
+
+// Include the compiled template
+require_once 'compiled/welcome.blade.php'; // Adjust this to your compiled template path
+
+// Use the template
+// echo welcome(['name' => 'John']);
+
+
+// function renderBlade($template, $data = []) {
+//     extract($data);
+//     ob_start();
+//     require_once "compiled/$template.blade.php";
+//     return ob_get_clean();
+// }
+
+// // Use the renderBlade function
+// echo renderBlade('welcome', ['name' => 'John']);
+
+
 ?>
+
+
+
 
 
 

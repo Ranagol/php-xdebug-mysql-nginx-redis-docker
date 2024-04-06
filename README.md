@@ -1,17 +1,13 @@
 # My comments
 
 
-
-
-
-
-phpmyadmin
 create one mvc + blade??? or twig????
 xdebug
 add console package + add command for triggering migrations
 add one exception
 seeding and faking
 add testing too
+add uploading
 
 
 
@@ -19,8 +15,8 @@ add testing too
 
 ## 🚀 Tecnologies
 
-- [PHP 7.4](https://php.net)
-- [Xdebug 3](https://xdebug.org/)
+- [PHP 8.2](https://php.net)
+- [Xdebug 3](https://xdebug.org/) - not working?
 - [Nginx](https://nginx.com/)
 - [MySQL 5.7](https://mysql.com)
 - [Docker](https://docker.com)
