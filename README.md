@@ -6,15 +6,16 @@
 
 
 
-create one mvc + blade??? or twig????
-add artisan
+
+Symhpony console
 add tinker
 xdebug
-add console package + add command for triggering migrations
+
 add one exception
 seeding and faking
 add testing too
-create one mvc using twig
+add command for triggering migrations
+create one mvc using twig + create header footer main navbar in twig
 
 bottom line: have all prepared for a situation when you need to build
 a vanilla php app without frameworks.
