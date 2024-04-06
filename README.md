@@ -12,11 +12,18 @@ as a base for the Docker.
 Thiago Luna - <a href="https://www.linkedin.com/in/thiago-luna/" target="_blank">Linkedin</a>
 
 # What this app can do
+For now, simply see composer.json, which packages are installed. All packages were checked - see
+index.php
 
 
+# Steps to do (my next tasks)
+add tinker
+add one exception
+add testing PHPUnit
+create one mvc using twig + create header footer main navbar in twig
 
-# Steps to do
-
+bottom line: have all prepared for a situation when you need to build
+a vanilla php app without frameworks.
 
 
 
@@ -57,19 +64,6 @@ The .vscode/launch.json should look like this:
             "hostname": "0.0.0.0",
         },
 
-
-
-
-xdebug
-add tinker
-add one exception
-seeding and faking
-add testing too
-add command for triggering migrations
-create one mvc using twig + create header footer main navbar in twig
-
-bottom line: have all prepared for a situation when you need to build
-a vanilla php app without frameworks.
 
 
 ## 🚀 Tecnologies used
