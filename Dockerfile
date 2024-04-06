@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     nano
 
-# Xdebug
+# Xdebug. Why do I see nothing, when I run php -m | grep xdebug?
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 # Clear cache

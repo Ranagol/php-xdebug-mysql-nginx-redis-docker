@@ -1,5 +1,15 @@
 <?php
 
+$x = 4;
+
+//Failed loading /usr/local/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so:  /usr/local/lib/php/extensions/no-debug-non-zts-20190902/xdebug.so: cannot open shared object file: No such file or directory
+xdebug_info();
+
+// xdebug_break() : bool
+// xdebug_connect_to_client() : bool
+// xdebug_is_debugger_active() : bool
+// xdebug_notify();
+
 // AUTOLOAD****************************************************
 require __DIR__ . '/vendor/autoload.php';
 
